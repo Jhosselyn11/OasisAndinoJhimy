@@ -5,7 +5,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'primary':"#D8B47A",
+        'primary':"#657A38",
         'secondary':"#8FA206",
         'tertiary':"#61AEC9",
       },
@@ -28,6 +28,14 @@ module.exports = {
 			  'chicago': "url('/src/img/chicago.jpg')",
 			  'europe': "url('/src/img/europe.jpg')",
 			  'iceland': "url('/src/img/iceland.jpg')",
+      },
+      fontSize:{
+        'xl-plus': '55px', // Personaliza el tamaño del texto a 1.25rem
+
+      },
+      height:{
+        'jhimy': '77%',
+
       },
     },
   },
