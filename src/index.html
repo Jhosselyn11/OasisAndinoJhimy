@@ -14,7 +14,7 @@
 </head>
 
 <body class="font-Montserrat dark:bg-gray-900">
-    <nav class="w-full h-14 hidden bg-white md:flex p-4 justify-between fixed z-10 dark:bg-gray-800">
+    <nav id="encabezado" class="w-full h-14 hidden bg-white md:flex p-4 justify-between relative z-10 dark:bg-gray-800">
         <div class="h-auto w-auto">
             <p class="text-xl text-primary font-black dark:text-white">Platzi Travel</p>
         </div>
@@ -37,24 +37,31 @@
         </div>
     </nav>
 
-    <section class="w-full h-screen">
-        <div class="w-full h-3/4" id="home">
-            <div class="w-full h-full">
-                <div
-                    class="w-full h-full flex flex-col absolute space-y-96 py-4 items-center md:space-y-0 md:items-start md:pt-48 md:justify-start ">
-                    <input
-                        class="outline-none p-3 rounded-full shadow-sm transition duration-300 focus-within:shadow-sm focus:ring-2 focus:w-11/12 md:hidden"
-                        placeholder="Pomabamba"  type="search">
-                    <div class="hidden h-auto md:w-2/5 md:flex pb-6">
-                        <p class="text-4xl ml-16 font-bold text-black">Oasis Andino</p>
-                        <p class="text-2xl ml-16 font-semibold text-black">Tu hogar en los andes</p>
-                    </div>
-                </div>
-                <div class="w-full h-full md:h-full md:bg-cover md:bg-center"  style="background-image: url('./img/andean-landscape-75858_1280.jpg')">
-                    <img class="md:hidden" src="./img/sanFrancisco.jpg" alt="">
-                </div>
+    <div id="caja" class=" w-screen h-screen relative" style="background-image: url('./img/andean-landscape-75858_1280.jpg')">
+        <div class="w-3/4 h-full bg-purple-700">
+            <div class=" h-auto w-full flex flex-col pb-6">
+                <p class="text-4xl ml-16 font-bold text-black">Oasis Andino</p>
+                <p class="text-2xl ml-16 font-semibold text-black">Tu hogar en los andes</p>
             </div>
+
         </div>
+    </div>
+    <div class=" relative w-32 h-32 bg-red-600">
+
+    </div>
+
+    <section class="w-full h-screen relative">
+
+        <div class="w-full h-3/4 relative" id="home">
+            <div class="w-full h-full md:h-full md:bg-cover md:bg-center"  style="background-image: url('./img/andean-landscape-75858_1280.jpg')">
+            </div>
+            
+        </div>
+
+       
+
+
+
 
         <div class="bg-red-400 p-8" id="nosotros">
             <div style="background-image: url('./img/logo\ circular\ ilustrativo\ tienda\ vegatales\ verde.png')"></div>
@@ -192,6 +199,15 @@
             moonNav.classList.toggle('dark');
             moonTab.classList.toggle('dark');
         }
+
+         // Obtener la altura del encabezado
+        var headerHeight = document.getElementById('encabezado').offsetHeight;
+
+        // Calcular la altura de la pantalla menos la altura del encabezado
+        var screenHeightMinusHeader = window.innerHeight - headerHeight;
+
+        // Aplicar la altura dinámicamente a la caja usando estilo en línea
+        document.getElementById('caja').style.height = screenHeightMinusHeader + 'px';
     </script>
 </body>
 
