@@ -65,13 +65,15 @@ module.exports = {
 			  'iceland': "url('/src/img/iceland.jpg')",
       },
       fontSize:{
-        'xl-plus': '75px', // Personaliza el tamaño del texto a 1.25rem
+        'xl-plus': '75px',
+        '2xl-plus':'88px', // Personaliza el tamaño del texto a 1.25rem
 
       },
       height:{
         'jhimy': '77%',
 
       },
+      
     },
   },
   plugins: [],
