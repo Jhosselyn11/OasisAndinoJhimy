@@ -1,728 +1,581 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Oasis Andino</title>
-    <link href="./output.css" rel="stylesheet" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Oasis Andino</title>
+  <link href="./output.css" rel="stylesheet" />
 
-  <body class="font-Montserrat dark:bg-gray-900 max-w-[1700px] justify-center">
-    <nav
-      id="encabezado"
-      class="w-full h-14 hidden bg-white md:flex p-4 justify-between relative z-10 dark:bg-gray-800"
-    >
-      <div class="h-auto w-auto">
-        <p class="text-xl text-primaryy font-black dark:text-white">
-          Platzi Travel
-        </p>
-      </div>
-      <div class="flex space-x-8">
-        <a
-          class="font-bold text-base text-primaryy dark:text-white"
-          href="#home"
-          >Inicio</a
-        >
-        <a
-          class="font-bold text-base text-primaryy dark:text-white"
-          href="#nosotros"
-          >Sobre Nosotros</a
-        >
-        <a
-          class="font-bold text-base text-primaryy dark:text-white"
-          href="#habitaciones"
-          >Habitaciones</a
-        >
-        <a
-          class="font-bold text-base text-primaryy dark:text-white"
-          href="#Precios"
-          >Precios</a
-        >
-      </div>
-      <div class="flex space-x-4">
-        <button id="moonNav">
-          <svg
-            width="20"
-            height="20"
-            viewBox="0 0 29 29"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              class="fill-current dark:text-primaryy"
-              d="M25.0748 19.2748C22.9267 20.2465 20.5334 20.5405 18.214 20.1177C15.8945 19.6949 13.7589 18.5753 12.0918 16.9082C10.4246 15.241 9.30509 13.1055 8.88228 10.786C8.45946 8.46654 8.75347 6.0733 9.72512 3.92514C8.01494 4.69801 6.51777 5.87422 5.36208 7.35288C4.20638 8.83154 3.42666 10.5685 3.08979 12.4147C2.75293 14.261 2.86898 16.1614 3.428 17.9529C3.98702 19.7444 4.97232 21.3736 6.29935 22.7006C7.62639 24.0276 9.25556 25.0129 11.0471 25.572C12.8386 26.131 14.739 26.247 16.5852 25.9102C18.4315 25.5733 20.1684 24.7936 21.6471 23.6379C23.1257 22.4822 24.302 20.985 25.0748 19.2748V19.2748Z"
-              fill="#D8B47A"
-            />
-          </svg>
-        </button>
-      </div>
-    </nav>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet" />
+</head>
 
-    <div
-      id="caja"
-      class="w-full relative"
-      style="
+<body class="font-Montserrat dark:bg-gray-900 max-w-[1700px] justify-center">
+  <nav id="encabezado" class="w-full h-14 hidden bg-white md:flex p-4 justify-between relative z-10 dark:bg-gray-800">
+    <div class="h-auto w-auto">
+      <p class="text-xl text-primaryy font-black dark:text-white">
+        Platzi Travel
+      </p>
+    </div>
+    <div class="flex space-x-8">
+      <a class="font-bold text-base text-primaryy dark:text-white" href="#home">Inicio</a>
+      <a class="font-bold text-base text-primaryy dark:text-white" href="#nosotros">Sobre Nosotros</a>
+      <a class="font-bold text-base text-primaryy dark:text-white" href="#habitaciones">Habitaciones</a>
+      <a class="font-bold text-base text-primaryy dark:text-white" href="#Precios">Precios</a>
+    </div>
+    <div class="flex space-x-4">
+      <button id="moonNav">
+        <svg width="20" height="20" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path class="fill-current dark:text-primaryy"
+            d="M25.0748 19.2748C22.9267 20.2465 20.5334 20.5405 18.214 20.1177C15.8945 19.6949 13.7589 18.5753 12.0918 16.9082C10.4246 15.241 9.30509 13.1055 8.88228 10.786C8.45946 8.46654 8.75347 6.0733 9.72512 3.92514C8.01494 4.69801 6.51777 5.87422 5.36208 7.35288C4.20638 8.83154 3.42666 10.5685 3.08979 12.4147C2.75293 14.261 2.86898 16.1614 3.428 17.9529C3.98702 19.7444 4.97232 21.3736 6.29935 22.7006C7.62639 24.0276 9.25556 25.0129 11.0471 25.572C12.8386 26.131 14.739 26.247 16.5852 25.9102C18.4315 25.5733 20.1684 24.7936 21.6471 23.6379C23.1257 22.4822 24.302 20.985 25.0748 19.2748V19.2748Z"
+            fill="#D8B47A" />
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <div id="caja" class="w-full relative" style="
         background-image: url('./img/andean-landscape-75858_1280.jpg');
         background-size: cover;
-      "
-    >
-      <div class="w-full lg:w-3/4 h-full">
-        <div
-          class="h-full w-full flex flex-col px-[60px] md:px-[100px] lg:px-0 pb-[74px] md:pb-[107px] justify-center items-center"
-        >
-          <h1
-            class="text-[36px] md:text-xl-plus 2xl:text-2xl-plus text-center font-bold text-white"
-          >
-            Hostal Oasis Andino
+      ">
+    <div class="w-full lg:w-3/4 h-full">
+      <div
+        class="h-full w-full flex flex-col px-[60px] md:px-[100px] lg:px-0 pb-[74px] md:pb-[107px] justify-center items-center">
+        <h1 class="text-[36px] md:text-xl-plus 2xl:text-2xl-plus text-center font-bold text-white">
+          Hostal Oasis Andino
+        </h1>
+        <p class="relative xl:right-[220px] text-2xl 2xl:text-[26px] font-semibold text-white text-center">
+          Tu hogar en los andes
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="relative w-screen h-[60vh] max-w-[1700px]">
+    <div class="w-full h-full flex justify-center">
+      <div class="relative w-full md:w-3/5 h-full flex md:pt-9">
+        <div style="
+              background-image: url('./img/pmbb.jpg');
+              background-size: cover;
+            " class="h-full  hidden md:flex   w-1/3 bg-primaryy rounded-s-lg my-auto"></div>
+        <div class="h-full w-full md:w-2/3 flex flex-col items-center gap-y-5 px-4 md:pt-12 justify-center">
+          <h1 class="font-semibold text-2xl text-primaryy dark:text-white">
+            Descubre nuestra esencia
           </h1>
-          <p
-            class="relative xl:right-[220px] text-2xl 2xl:text-[26px] font-semibold text-white text-center"
-          >
-            Tu hogar en los andes
+          <p class="text-base dark:text-white text-pretty text-center">
+            Somos una familia de la ciudad de Pomabamba, dedicada a brindarte
+            una experiencia única en los Andes. Con años de experiencia,
+            ofrecemos un servicio personalizado y cómodas habitaciones con
+            todas las comodidades necesarias. Además, nuestra ubicación te
+            permite explorar la belleza natural de la región. Al hospedarte
+            con nosotros, disfrutas de la hospitalidad de los Andes.
+          </p>
+          <p class="text-base dark:text-white">
+            ¡Esperamos recibirte pronto!
           </p>
         </div>
       </div>
     </div>
-    <div class="relative w-screen h-[60vh] max-w-[1700px]">
-      <div class="w-full h-full flex justify-center">
-        <div class="relative w-full md:w-3/5 h-full flex md:pt-9">
-          <div
-            style="
-              background-image: url('./img/andean-landscape-75858_1280.jpg');
-              background-size: cover;
-            "
-            class="h-full  hidden md:flex   w-1/3 bg-primaryy rounded-s-lg my-auto"
-          ></div>
-          <div
-            class="h-full w-full md:w-2/3 flex flex-col items-center gap-y-5 px-4 md:pt-12 justify-center"
-          >
-            <h1 class="font-semibold text-2xl text-primaryy">
-              Descubre nuestra esencia
-            </h1>
-            <p class="text-base dark:text-white text-pretty text-center 2xl:bg-black xl:bg-green-700 lg:bg-blue-700 md:bg-purple-800 sm:bg-cyan-400">
-              Somos una familia de la ciudad de Pomabamba, dedicada a brindarte
-              una experiencia única en los Andes. Con años de experiencia,
-              ofrecemos un servicio personalizado y cómodas habitaciones con
-              todas las comodidades necesarias. Además, nuestra ubicación te
-              permite explorar la belleza natural de la región. Al hospedarte
-              con nosotros, disfrutas de la hospitalidad de los Andes.
-            </p>
-            <p class="text-base dark:text-white">
-              ¡Esperamos recibirte pronto!
-            </p>
-          </div>
+  </div>
+
+  <section class="w-full h-screen relative">
+    <div class="px-2 h-auto w-full md:px-6" id="habitaciones">
+      <p class="text-3xl text-primaryy font-semibold pb-6 mt-6 dark:text-white">
+        Nuestras habitaciones
+      </p>
+      <div class="w-full h-full flex flex-col items-center">
+        <!-- Card 1-->
+        <div class="w-full h-96 bg-cover rounded-2xl mb-8 md:bg-center"
+          style="background-image: url('./img/cama1.jpg')">
+          <p class="CardTittle md:text-black">
+            Descanso y entretenimiento combinados
+          </p>
+          <p class="text-lg pl-8 text-black mr-24 md:text-lg">
+            Cama de dos plazas, TV con cable
+          </p>
         </div>
-      </div>
-    </div>
-
-    <section class="w-full h-screen relative">
-      <div class="px-2 h-auto w-full md:px-6" id="habitaciones">
-        <p
-          class="text-3xl text-primaryy font-semibold pb-6 mt-6 dark:text-white"
-        >
-          Nuestras habitaciones
-        </p>
-        <div class="w-full h-full flex flex-col items-center">
-          <!-- Card 1-->
-          <div
-            class="w-full h-96 bg-cover rounded-2xl mb-8 md:bg-center"
-            style="background-image: url('./img/cama1.jpg')"
-          >
-            <p class="CardTittle md:text-black">
-              Descanso y entretenimiento combinados
-            </p>
-            <p class="text-lg pl-8 text-black mr-24 md:text-lg">
-              Cama de dos plazas, TV con cable
-            </p>
-          </div>
-          <div class="md:flex md:h-full sm:hidden md:w-full md:space-x-4">
-            <!-- Card 2-->
-            <div
-              class="w-full h-96 md:h-auto bg-cover rounded-2xl mb-8 md:auto"
-              style="background-image: url('./img/baño.jpg')"
-            >
-              <p class="CardTittle">Limpieza y comodidad</p>
-              <p class="text-lg pl-8 text-black mr-24">
-                Baño y ducha con agua caliente
-              </p>
-            </div>
-            <div class="h-full w-full">
-              <!-- Card 3-->
-              <div
-                class="w-full h-96 bg-cover rounded-2xl mb-8"
-                style="background-image: url('./img/escritorio.jpg')"
-              >
-                <p class="CardTittle">Productividad y comodidad</p>
-                <p class="text-lg pl-8 text-black mr-24 md:text-lg">
-                  Mesa de trabajo con silla de escritorio
-                </p>
-              </div>
-              <!-- Card 4-->
-              <div
-                class="w-full h-96 bg-cover rounded-2xl mb-8"
-                style="background-image: url('./img/armario.jpg')"
-              >
-                <p class="CardTittle">Almacenamiento conveniente</p>
-                <p class="text-lg pl-8 text-white mr-24 md:text-lg">
-                  Armario para mantener tus pertenencias ordenadas
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div id="prices" class="w-full h-auto">
-        <section class="bg-white dark:bg-gray-900">
-          <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
-            <div class="mx-auto max-w-screen-md text-center mb-8 lg:mb-12">
-              <h2
-                class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white"
-              >
-                Designed for business teams like yours
-              </h2>
-              <p
-                class="mb-5 font-light text-gray-500 sm:text-xl dark:text-gray-400"
-              >
-                Here at Flowbite we focus on markets where technology,
-                innovation, and capital can unlock long-term value and drive
-                economic growth.
-              </p>
-            </div>
-            <div
-              class="space-y-8 lg:grid lg:grid-cols-3 sm:gap-6 xl:gap-10 lg:space-y-0"
-            >
-              <!-- Pricing Card -->
-              <div
-                class="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-white rounded-lg border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white"
-              >
-                <h3 class="mb-4 text-2xl font-semibold">Starter</h3>
-                <p
-                  class="font-light text-gray-500 sm:text-lg dark:text-gray-400"
-                >
-                  Best option for personal use & for your next project.
-                </p>
-                <div class="flex justify-center items-baseline my-8">
-                  <span class="mr-2 text-5xl font-extrabold">$29</span>
-                  <span class="text-gray-500 dark:text-gray-400">/month</span>
-                </div>
-                <!-- List -->
-                <ul role="list" class="mb-8 space-y-4 text-left">
-                  <li class="flex items-center space-x-3">
-                    <!-- Icon -->
-                    <svg
-                      class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                        clip-rule="evenodd"
-                      ></path>
-                    </svg>
-                    <span>Individual configuration</span>
-                  </li>
-                  <li class="flex items-center space-x-3">
-                    <!-- Icon -->
-                    <svg
-                      class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                        clip-rule="evenodd"
-                      ></path>
-                    </svg>
-                    <span>No setup, or hidden fees</span>
-                  </li>
-                  <li class="flex items-center space-x-3">
-                    <!-- Icon -->
-                    <svg
-                      class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                        clip-rule="evenodd"
-                      ></path>
-                    </svg>
-                    <span
-                      >Team size:
-                      <span class="font-semibold">1 developer</span></span
-                    >
-                  </li>
-                  <li class="flex items-center space-x-3">
-                    <!-- Icon -->
-                    <svg
-                      class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                        clip-rule="evenodd"
-                      ></path>
-                    </svg>
-                    <span
-                      >Premium support:
-                      <span class="font-semibold">6 months</span></span
-                    >
-                  </li>
-                  <li class="flex items-center space-x-3">
-                    <!-- Icon -->
-                    <svg
-                      class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                        clip-rule="evenodd"
-                      ></path>
-                    </svg>
-                    <span
-                      >Free updates:
-                      <span class="font-semibold">6 months</span></span
-                    >
-                  </li>
-                </ul>
-                <a
-                  href="#"
-                  class="text-white bg-primaryy hover:bg-primary-700 focus:ring-4 focus:ring-primary-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:text-white dark:focus:ring-primary-900"
-                  >Get started</a
-                >
-              </div>
-              <!-- Pricing Card -->
-              <div
-                class="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-white rounded-lg border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white"
-              >
-                <h3 class="mb-4 text-2xl font-semibold">Company</h3>
-                <p
-                  class="font-light text-gray-500 sm:text-lg dark:text-gray-400"
-                >
-                  Relevant for multiple users, extended & premium support.
-                </p>
-                <div class="flex justify-center items-baseline my-8">
-                  <span class="mr-2 text-5xl font-extrabold">$99</span>
-                  <span class="text-gray-500 dark:text-gray-400">/month</span>
-                </div>
-                <!-- List -->
-                <ul role="list" class="mb-8 space-y-4 text-left">
-                  <li class="flex items-center space-x-3">
-                    <!-- Icon -->
-                    <svg
-                      class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                        clip-rule="evenodd"
-                      ></path>
-                    </svg>
-                    <span>Individual configuration</span>
-                  </li>
-                  <li class="flex items-center space-x-3">
-                    <!-- Icon -->
-                    <svg
-                      class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                        clip-rule="evenodd"
-                      ></path>
-                    </svg>
-                    <span>No setup, or hidden fees</span>
-                  </li>
-                  <li class="flex items-center space-x-3">
-                    <!-- Icon -->
-                    <svg
-                      class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                        clip-rule="evenodd"
-                      ></path>
-                    </svg>
-                    <span
-                      >Team size:
-                      <span class="font-semibold">10 developers</span></span
-                    >
-                  </li>
-                  <li class="flex items-center space-x-3">
-                    <!-- Icon -->
-                    <svg
-                      class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                        clip-rule="evenodd"
-                      ></path>
-                    </svg>
-                    <span
-                      >Premium support:
-                      <span class="font-semibold">24 months</span></span
-                    >
-                  </li>
-                  <li class="flex items-center space-x-3">
-                    <!-- Icon -->
-                    <svg
-                      class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                        clip-rule="evenodd"
-                      ></path>
-                    </svg>
-                    <span
-                      >Free updates:
-                      <span class="font-semibold">24 months</span></span
-                    >
-                  </li>
-                </ul>
-                <a
-                  href="#"
-                  class="text-white bg-primaryy hover:bg-primary-700 focus:ring-4 focus:ring-primary-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:text-white dark:focus:ring-primary-900"
-                  >Get started</a
-                >
-              </div>
-              <!-- Pricing Card -->
-              <div
-                class="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-white rounded-lg border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white"
-              >
-                <h3 class="mb-4 text-2xl font-semibold">Enterprise</h3>
-                <p
-                  class="font-light text-gray-500 sm:text-lg dark:text-gray-400"
-                >
-                  Best for large scale uses and extended redistribution rights.
-                </p>
-                <div class="flex justify-center items-baseline my-8">
-                  <span class="mr-2 text-5xl font-extrabold">$499</span>
-                  <span class="text-gray-500 dark:text-gray-400">/month</span>
-                </div>
-                <!-- List -->
-                <ul role="list" class="mb-8 space-y-4 text-left">
-                  <li class="flex items-center space-x-3">
-                    <!-- Icon -->
-                    <svg
-                      class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                        clip-rule="evenodd"
-                      ></path>
-                    </svg>
-                    <span>Individual configuration</span>
-                  </li>
-                  <li class="flex items-center space-x-3">
-                    <!-- Icon -->
-                    <svg
-                      class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                        clip-rule="evenodd"
-                      ></path>
-                    </svg>
-                    <span>No setup, or hidden fees</span>
-                  </li>
-                  <li class="flex items-center space-x-3">
-                    <!-- Icon -->
-                    <svg
-                      class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                        clip-rule="evenodd"
-                      ></path>
-                    </svg>
-                    <span
-                      >Team size:
-                      <span class="font-semibold">100+ developers</span></span
-                    >
-                  </li>
-                  <li class="flex items-center space-x-3">
-                    <!-- Icon -->
-                    <svg
-                      class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                        clip-rule="evenodd"
-                      ></path>
-                    </svg>
-                    <span
-                      >Premium support:
-                      <span class="font-semibold">36 months</span></span
-                    >
-                  </li>
-                  <li class="flex items-center space-x-3">
-                    <!-- Icon -->
-                    <svg
-                      class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                        clip-rule="evenodd"
-                      ></path>
-                    </svg>
-                    <span
-                      >Free updates:
-                      <span class="font-semibold">36 months</span></span
-                    >
-                  </li>
-                </ul>
-                <a
-                  href="#"
-                  class="text-white bg-primaryy hover:bg-primary-700 focus:ring-4 focus:ring-primary-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:text-white dark:focus:ring-primary-900"
-                  >Get started</a
-                >
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-
-      <div class="p-6" id="Precios">
-        <p class="text-3xl font-semibold text-primaryy dark:text-white">
-          Precios
-        </p>
-        <div
-          class="w-auto h-72 items-center mt-6 p-6 overflow-x-auto overscroll-x-contain flex space-x-6 overflow-y-hidden"
-        >
-          <!-- Card 1-->
-          <div class="Card">
-            <div
-              class="w-full h-3/5 bg-cover rounded-t-lg"
-              style="background-image: url('./img/norway.jpg')"
-            ></div>
-            <div
-              class="w-full h-2/5 bg-secondary rounded-b-lg dark:bg-gray-700"
-            >
-              <p class="text-white text-bold text-xl px-4 py-2 dark:text-white">
-                Norway
-              </p>
-              <p class="text-white text-lg px-4 dark:text-white">
-                Paisaje increibles
-              </p>
-            </div>
-          </div>
+        <div class="md:flex md:h-full sm:hidden md:w-full md:space-x-4">
           <!-- Card 2-->
-          <div class="Card">
-            <div
-              class="w-full h-3/5 bg-cover rounded-t-lg"
-              style="background-image: url('./img/new_york.jpg')"
-            ></div>
-            <div class="w-full h-2/5 bg-white rounded-b-lg dark:bg-gray-800">
-              <p
-                class="text-tertiary text-bold text-xl px-4 py-2 dark:text-white"
-              >
-                New York
-              </p>
-              <p class="text-tertiary text-lg px-4 dark:text-white">
-                La gran manzana
+          <div class="w-full h-96 md:h-auto bg-cover rounded-2xl mb-8 md:auto"
+            style="background-image: url('./img/baño.jpg')">
+            <p class="CardTittle">Limpieza y comodidad</p>
+            <p class="text-lg pl-8 text-black mr-24">
+              Baño y ducha con agua caliente
+            </p>
+          </div>
+          <div class="h-full w-full">
+            <!-- Card 3-->
+            <div class="w-full h-96 bg-cover rounded-2xl mb-8" style="background-image: url('./img/escritorio.jpg')">
+              <p class="CardTittle">Productividad y comodidad</p>
+              <p class="text-lg pl-8 text-black mr-24 md:text-lg">
+                Mesa de trabajo con silla de escritorio
               </p>
             </div>
-          </div>
-          <!-- Card 3-->
-          <div class="Card">
-            <div
-              class="w-full h-3/5 bg-cover rounded-t-lg"
-              style="background-image: url('./img/yosemite.jpg')"
-            ></div>
-            <div
-              class="w-full h-2/5 bg-secondary rounded-b-lg dark:bg-gray-700"
-            >
-              <p class="text-white text-bold text-xl px-4 py-2 dark:text-white">
-                Yosemite
-              </p>
-              <p class="text-white text-lg px-4 dark:text-white">
-                Paisaje increibles
+            <!-- Card 4-->
+            <div class="w-full h-96 bg-cover rounded-2xl mb-8" style="background-image: url('./img/armario.jpg')">
+              <p class="CardTittle">Almacenamiento conveniente</p>
+              <p class="text-lg pl-8 text-white mr-24 md:text-lg">
+                Armario para mantener tus pertenencias ordenadas
               </p>
             </div>
           </div>
         </div>
       </div>
-
-      <footer class="w-full h-auto bg-gray-100 p-6 space-y-2" id="nosotros">
-        <p class="text-lg">Acerca de</p>
-        <p class="text-sm text-gray-400">Acerca de</p>
-        <p class="text-sm text-gray-400">Inversionistas</p>
-        <p class="text-sm text-gray-400">Empleos</p>
-        <p class="text-sm text-gray-400">Terminos y condiciones</p>
-        <p class="text-sm text-gray-400">Platzi Travel, Inc.</p>
-        <p class="text-sm text-gray-400">Síguenos</p>
-      </footer>
-    </section>
-    <!-- tab_bar-->
-    <div
-      class="w-full h-16 bg-white fixed left-0 bottom-0 shadow-md flex space-x-8 items-center justify-center md:hidden dark:bg-gray-800"
-      id="tab_bar"
-    >
-      <a href="#home">
-        <svg
-          width="30"
-          height="30"
-          viewBox="0 0 20 20"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            class="fill-current text-gray-300"
-            d="M10.707 2.29303C10.5195 2.10556 10.2652 2.00024 10 2.00024C9.73488 2.00024 9.48057 2.10556 9.29304 2.29303L2.29304 9.29303C2.11088 9.48163 2.01009 9.73423 2.01237 9.99643C2.01465 10.2586 2.11981 10.5094 2.30522 10.6948C2.49063 10.8803 2.74144 10.9854 3.00364 10.9877C3.26584 10.99 3.51844 10.8892 3.70704 10.707L4.00004 10.414V17C4.00004 17.2652 4.1054 17.5196 4.29293 17.7071C4.48047 17.8947 4.73482 18 5.00004 18H7.00004C7.26526 18 7.51961 17.8947 7.70715 17.7071C7.89468 17.5196 8.00004 17.2652 8.00004 17V15C8.00004 14.7348 8.1054 14.4805 8.29293 14.2929C8.48047 14.1054 8.73482 14 9.00004 14H11C11.2653 14 11.5196 14.1054 11.7071 14.2929C11.8947 14.4805 12 14.7348 12 15V17C12 17.2652 12.1054 17.5196 12.2929 17.7071C12.4805 17.8947 12.7348 18 13 18H15C15.2653 18 15.5196 17.8947 15.7071 17.7071C15.8947 17.5196 16 17.2652 16 17V10.414L16.293 10.707C16.4816 10.8892 16.7342 10.99 16.9964 10.9877C17.2586 10.9854 17.5095 10.8803 17.6949 10.6948C17.8803 10.5094 17.9854 10.2586 17.9877 9.99643C17.99 9.73423 17.8892 9.48163 17.707 9.29303L10.707 2.29303Z"
-            fill="#3F3F46"
-          />
-        </svg>
-      </a>
-      <a href="#rentas_destacadas">
-        <svg
-          width="30"
-          height="30"
-          viewBox="0 0 20 20"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            class="fill-current text-primaryy"
-            fill-rule="evenodd"
-            clip-rule="evenodd"
-            d="M8 3.99997C6.93913 3.99997 5.92172 4.4214 5.17157 5.17155C4.42143 5.92169 4 6.93911 4 7.99997C4 9.06084 4.42143 10.0783 5.17157 10.8284C5.92172 11.5785 6.93913 12 8 12C9.06087 12 10.0783 11.5785 10.8284 10.8284C11.5786 10.0783 12 9.06084 12 7.99997C12 6.93911 11.5786 5.92169 10.8284 5.17155C10.0783 4.4214 9.06087 3.99997 8 3.99997ZM2 7.99997C1.99988 7.05568 2.22264 6.12468 2.65017 5.28271C3.0777 4.44074 3.69792 3.71157 4.4604 3.1545C5.22287 2.59743 6.10606 2.22819 7.03815 2.07681C7.97023 1.92543 8.92488 1.99618 9.82446 2.28332C10.724 2.57046 11.5432 3.06587 12.2152 3.72927C12.8872 4.39266 13.3931 5.20531 13.6919 6.10111C13.9906 6.9969 14.0737 7.95056 13.9343 8.88452C13.795 9.81848 13.4372 10.7064 12.89 11.476L17.707 16.293C17.8892 16.4816 17.99 16.7342 17.9877 16.9964C17.9854 17.2586 17.8802 17.5094 17.6948 17.6948C17.5094 17.8802 17.2586 17.9854 16.9964 17.9876C16.7342 17.9899 16.4816 17.8891 16.293 17.707L11.477 12.891C10.5794 13.5293 9.52335 13.9081 8.42468 13.9861C7.326 14.0641 6.22707 13.8381 5.2483 13.3329C4.26953 12.8278 3.44869 12.063 2.87572 11.1223C2.30276 10.1816 1.99979 9.10141 2 7.99997Z"
-            fill="#3F3F46"
-          />
-        </svg>
-      </a>
-      <a href="#recomendados">
-        <svg
-          width="30"
-          height="30"
-          viewBox="0 0 20 20"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            class="fill-current text-gray-300"
-            fill-rule="evenodd"
-            clip-rule="evenodd"
-            d="M3.172 5.17202C3.92211 4.42214 4.93934 4.00087 6 4.00087C7.06066 4.00087 8.07789 4.42214 8.828 5.17202L10 6.34302L11.172 5.17202C11.541 4.78998 11.9824 4.48525 12.4704 4.27561C12.9584 4.06598 13.4833 3.95563 14.0144 3.95102C14.5455 3.9464 15.0722 4.04761 15.5638 4.24873C16.0554 4.44986 16.502 4.74687 16.8776 5.12244C17.2532 5.49801 17.5502 5.94462 17.7513 6.4362C17.9524 6.92779 18.0536 7.45451 18.049 7.98562C18.0444 8.51674 17.934 9.04162 17.7244 9.52964C17.5148 10.0177 17.21 10.459 16.828 10.828L10 17.657L3.172 10.828C2.42212 10.0779 2.00085 9.06068 2.00085 8.00002C2.00085 6.93936 2.42212 5.92213 3.172 5.17202Z"
-            fill="#3F3F46"
-          />
-        </svg>
-      </a>
-      <button id="moonTab">
-        <svg
-          width="30"
-          height="30"
-          viewBox="0 0 29 29"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            class="fill-current text-gray-300"
-            d="M25.0748 19.2748C22.9267 20.2465 20.5334 20.5405 18.214 20.1177C15.8945 19.6949 13.7589 18.5753 12.0918 16.9082C10.4246 15.241 9.30509 13.1055 8.88228 10.786C8.45946 8.46654 8.75347 6.0733 9.72512 3.92514C8.01494 4.69801 6.51777 5.87422 5.36208 7.35288C4.20638 8.83154 3.42666 10.5685 3.08979 12.4147C2.75293 14.261 2.86898 16.1614 3.428 17.9529C3.98702 19.7444 4.97232 21.3736 6.29935 22.7006C7.62639 24.0276 9.25556 25.0129 11.0471 25.572C12.8386 26.131 14.739 26.247 16.5852 25.9102C18.4315 25.5733 20.1684 24.7936 21.6471 23.6379C23.1257 22.4822 24.302 20.985 25.0748 19.2748V19.2748Z"
-            fill="#CC2D4A"
-          />
-        </svg>
-      </button>
-      <a href="">
-        <svg
-          width="30"
-          height="30"
-          viewBox="0 0 20 20"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            class="fill-current text-gray-300"
-            fill-rule="evenodd"
-            clip-rule="evenodd"
-            d="M10 9C10.7956 9 11.5587 8.68393 12.1213 8.12132C12.6839 7.55871 13 6.79565 13 6C13 5.20435 12.6839 4.44129 12.1213 3.87868C11.5587 3.31607 10.7956 3 10 3C9.20435 3 8.44129 3.31607 7.87868 3.87868C7.31607 4.44129 7 5.20435 7 6C7 6.79565 7.31607 7.55871 7.87868 8.12132C8.44129 8.68393 9.20435 9 10 9ZM3 18C3 17.0807 3.18106 16.1705 3.53284 15.3212C3.88463 14.4719 4.40024 13.7003 5.05025 13.0503C5.70026 12.4002 6.47194 11.8846 7.32122 11.5328C8.1705 11.1811 9.08075 11 10 11C10.9193 11 11.8295 11.1811 12.6788 11.5328C13.5281 11.8846 14.2997 12.4002 14.9497 13.0503C15.5998 13.7003 16.1154 14.4719 16.4672 15.3212C16.8189 16.1705 17 17.0807 17 18H3Z"
-            fill="#3F3F46"
-          />
-        </svg>
-      </a>
     </div>
-    <script>
-      const htmlElement = document.querySelector("html");
-      const moonNav = document.querySelector("#moonNav");
-      const moonTab = document.querySelector("#moonTab");
-      const toggleButton = document.querySelector("#toggle");
-      const toggleButtonSm = document.querySelector("#toggle-sm");
 
-      moonNav.addEventListener("click", toggleDarkMode);
-      moonTab.addEventListener("click", toggleDarkMode);
+    <div id="prices" class="w-full h-auto">
+      <section class="bg-white dark:bg-gray-900">
+        <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
+          <div class="mx-auto max-w-screen-md text-center mb-8 lg:mb-12">
+            <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
+              Designed for business teams like yours
+            </h2>
+            <p class="mb-5 font-light text-gray-500 sm:text-xl dark:text-gray-400">
+              Here at Flowbite we focus on markets where technology,
+              innovation, and capital can unlock long-term value and drive
+              economic growth.
+            </p>
+          </div>
+          <div class="space-y-8 lg:grid lg:grid-cols-3 sm:gap-6 xl:gap-10 lg:space-y-0">
+            <!-- Pricing Card -->
+            <div
+              class="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-white rounded-lg border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white">
+              <h3 class="mb-4 text-2xl font-semibold">Starter</h3>
+              <p class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
+                Best option for personal use & for your next project.
+              </p>
+              <div class="flex justify-center items-baseline my-8">
+                <span class="mr-2 text-5xl font-extrabold">$29</span>
+                <span class="text-gray-500 dark:text-gray-400">/month</span>
+              </div>
+              <!-- List -->
+              <ul role="list" class="mb-8 space-y-4 text-left">
+                <li class="flex items-center space-x-3">
+                  <!-- Icon -->
+                  <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor"
+                    viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                  <span>Individual configuration</span>
+                </li>
+                <li class="flex items-center space-x-3">
+                  <!-- Icon -->
+                  <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor"
+                    viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                  <span>No setup, or hidden fees</span>
+                </li>
+                <li class="flex items-center space-x-3">
+                  <!-- Icon -->
+                  <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor"
+                    viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                  <span>Team size:
+                    <span class="font-semibold">1 developer</span></span>
+                </li>
+                <li class="flex items-center space-x-3">
+                  <!-- Icon -->
+                  <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor"
+                    viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                  <span>Premium support:
+                    <span class="font-semibold">6 months</span></span>
+                </li>
+                <li class="flex items-center space-x-3">
+                  <!-- Icon -->
+                  <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor"
+                    viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                  <span>Free updates:
+                    <span class="font-semibold">6 months</span></span>
+                </li>
+              </ul>
+              <a href="#"
+                class="text-white bg-primaryy hover:bg-primary-700 focus:ring-4 focus:ring-primary-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:text-white dark:focus:ring-primary-900">Get
+                started</a>
+            </div>
+            <!-- Pricing Card -->
+            <div
+              class="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-white rounded-lg border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white">
+              <h3 class="mb-4 text-2xl font-semibold">Company</h3>
+              <p class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
+                Relevant for multiple users, extended & premium support.
+              </p>
+              <div class="flex justify-center items-baseline my-8">
+                <span class="mr-2 text-5xl font-extrabold">$99</span>
+                <span class="text-gray-500 dark:text-gray-400">/month</span>
+              </div>
+              <!-- List -->
+              <ul role="list" class="mb-8 space-y-4 text-left">
+                <li class="flex items-center space-x-3">
+                  <!-- Icon -->
+                  <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor"
+                    viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                  <span>Individual configuration</span>
+                </li>
+                <li class="flex items-center space-x-3">
+                  <!-- Icon -->
+                  <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor"
+                    viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                  <span>No setup, or hidden fees</span>
+                </li>
+                <li class="flex items-center space-x-3">
+                  <!-- Icon -->
+                  <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor"
+                    viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                  <span>Team size:
+                    <span class="font-semibold">10 developers</span></span>
+                </li>
+                <li class="flex items-center space-x-3">
+                  <!-- Icon -->
+                  <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor"
+                    viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                  <span>Premium support:
+                    <span class="font-semibold">24 months</span></span>
+                </li>
+                <li class="flex items-center space-x-3">
+                  <!-- Icon -->
+                  <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor"
+                    viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                  <span>Free updates:
+                    <span class="font-semibold">24 months</span></span>
+                </li>
+              </ul>
+              <a href="#"
+                class="text-white bg-primaryy hover:bg-primary-700 focus:ring-4 focus:ring-primary-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:text-white dark:focus:ring-primary-900">Get
+                started</a>
+            </div>
+            <!-- Pricing Card -->
+            <div
+              class="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-white rounded-lg border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white">
+              <h3 class="mb-4 text-2xl font-semibold">Enterprise</h3>
+              <p class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
+                Best for large scale uses and extended redistribution rights.
+              </p>
+              <div class="flex justify-center items-baseline my-8">
+                <span class="mr-2 text-5xl font-extrabold">$499</span>
+                <span class="text-gray-500 dark:text-gray-400">/month</span>
+              </div>
+              <!-- List -->
+              <ul role="list" class="mb-8 space-y-4 text-left">
+                <li class="flex items-center space-x-3">
+                  <!-- Icon -->
+                  <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor"
+                    viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                  <span>Individual configuration</span>
+                </li>
+                <li class="flex items-center space-x-3">
+                  <!-- Icon -->
+                  <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor"
+                    viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                  <span>No setup, or hidden fees</span>
+                </li>
+                <li class="flex items-center space-x-3">
+                  <!-- Icon -->
+                  <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor"
+                    viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                  <span>Team size:
+                    <span class="font-semibold">100+ developers</span></span>
+                </li>
+                <li class="flex items-center space-x-3">
+                  <!-- Icon -->
+                  <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor"
+                    viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                  <span>Premium support:
+                    <span class="font-semibold">36 months</span></span>
+                </li>
+                <li class="flex items-center space-x-3">
+                  <!-- Icon -->
+                  <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor"
+                    viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                  <span>Free updates:
+                    <span class="font-semibold">36 months</span></span>
+                </li>
+              </ul>
+              <a href="#"
+                class="text-white bg-primaryy hover:bg-primary-700 focus:ring-4 focus:ring-primary-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:text-white dark:focus:ring-primary-900">Get
+                started</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
 
-      function toggleDarkMode() {
-        htmlElement.classList.toggle("dark");
-        moonNav.classList.toggle("dark");
-        moonTab.classList.toggle("dark");
-      }
+    <div class="p-6" id="Precios">
+      <p class="text-3xl font-semibold text-primaryy dark:text-white">
+        Nuestras habitaciones
+      </p>
+      <div
+        class="w-auto h-72 items-center mt-6 p-6 overflow-x-auto overscroll-x-contain flex space-x-6 overflow-y-hidden">
+        <!-- Card 1-->
+        <div class="Card ">
+          <div class="w-full h-3/5 bg-cover rounded-t-lg" style="background-image: url('./img/cama1.jpg')"></div>
+          <div class="w-full  bg-primaryy rounded-b-lg dark:bg-gray-700">
+            <p class="text-white font-bold text-sm px-4 py-2 dark:text-white">
+              Máximo confort
+            </p>
+            <p class="text-white text-xs px-4 dark:text-white">
+              Cama de dos plazas
+            </p>
+          </div>
+        </div>
+        <!-- Card 2-->
+        <div class="Card">
+          <div class="w-full h-3/5 bg-cover rounded-t-lg" style="background-image: url('./img/tv.jpg')"></div>
+          <div class="w-full h-2/5 bg-white rounded-b-lg dark:bg-gray-800">
+            <p class="text-black font-bold text-sm px-4 py-2 dark:text-white">
+              Entretenimiento
+            </p>
+            <p class="text-black text-xs px-4 dark:text-white">
+              TV con cable
+            </p>
+          </div>
+        </div>
+        <!-- Card 3-->
+        <div class="Card">
+          <div class="w-full h-3/5 bg-cover rounded-t-lg" style="background-image: url('./img/armario.jpg')"></div>
+          <div class="w-full h-2/5 bg-primaryy rounded-b-lg dark:bg-gray-700">
+            <p class="text-white font-bold text-sm px-4 py-2 dark:text-white">
+              Yosemite
+            </p>
+            <p class="text-white text-xs px-4 dark:text-white">
+              Paisaje increibles
+            </p>
+          </div>
+        </div>
+        <!-- Card 4-->
+        <div class="Card">
+          <div class="w-full h-3/5 bg-cover rounded-t-lg" style="background-image: url('./img/escritorio.jpg')"></div>
+          <div class="w-full h-2/5 bg-white rounded-b-lg dark:bg-gray-800">
+            <p class="text-black font-bold text-sm px-4 py-2 dark:text-white">
+              Productividad y comodidad
+            </p>
+            <p class="text-black text-xs px-4 dark:text-white">
+              Mesa de trabajo con silla de escritorio
+            </p>
+          </div>
+        </div>
+        <!-- Card 5-->
+        <div class="Card">
+          <div class="w-full h-3/5 bg-cover rounded-t-lg" style="background-image: url('./img/baño.jpg')"></div>
+          <div class="w-full h-2/5 bg-primaryy rounded-b-lg dark:bg-gray-700">
+            <p class="text-white font-bold text-sm px-4 py-2 dark:text-white">
+              Limpieza y comodidad
+            </p>
+            <p class="text-white text-xs px-4 dark:text-white">
+              Baño privado con  ducha y agua caliente
+            </p>
+          </div>
+        </div>
+        <!-- Card 6-->
+        <div class="Card">
+          <div class="w-full h-3/5 bg-cover rounded-t-lg" style="background-image: url('./img/ventana.jpg')"></div>
+          <div class="w-full h-2/5 bg-white rounded-b-lg dark:bg-gray-800">
+            <p class="text-black font-bold text-sm px-4 py-2 dark:text-white">
+              Vista Panorámica
+            </p>
+            <p class="text-black text-xs px-4 dark:text-white">
+              Conecta con la belleza natural de Pomabamba
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
 
-      // Obtener la altura del encabezado
-      var headerHeight = document.getElementById("encabezado").offsetHeight;
+    <!-- CELULAR-->
+    <footer class="bg-primaryy bg-opacity-25 dark:bg-gray-300 dark:bg-opacity-25 sm:hidden" id="footer">
+      <!-- Logo y nombre-->
+      <div class="flex flex-row items-center justify-center p-4">
+        <img class="w-16 h-16 rounded-full" src="./img/logooasis.png" alt="Logo">
+        <div class="pl-2 pr-2 flex flex-col items-center">
+          <div class="font-bold text-sm">OASIS ANDINO</div>
+          <div class="text-xs">Hostal/Hospedaje</div>
+        </div>
+      </div>
 
-      // Calcular la altura de la pantalla menos la altura del encabezado
-      var screenHeightMinusHeader = window.innerHeight - headerHeight;
+      <div class="flex flex-row justify-center  gap-3 text-xs pt-2 pb-2">
+        <a href="https://www.instagram.com/hostaloasisandino?igsh=MXdnYWVjNzd3YWE2&utm_source=qr"
+          class="hover:text-pink-500 flex flex-row items-center"><i
+            class="fa fa-instagram mr-1"></i>hostaloasisandino</a>
+        <a href="https://www.facebook.com/profile.php?id=61554410169587&mibextid=LQQJ4d"
+          class="hover:text-blue-600 flex flex-row items-center"><i class="fa fa-facebook mr-1"></i>Oasis Andino
+        </a>
+        <a href="https://wa.me/message/BRTUPSHDUEZGE1" class="hover:text-green-400 flex flex-row items-center"><i
+            class="fa fa-whatsapp mr-1"></i>916 938 698
+        </a>
+      </div>
 
-      // Aplicar la altura dinámicamente a la caja usando estilo en línea
-      document.getElementById("caja").style.height =
-        screenHeightMinusHeader + "px";
-    </script>
-  </body>
+      <div class="text-xs  pb-2 flex justify-center items-center hover:text-red-400 pt-2"><i
+          class="fa fa-envelope mr-1"></i> hostaloasisandino@gmail.com</div>
+
+      <div class="border-t border-black text-xs pt-5 pb-5 flex justify-center mt-3">© 2024 Oasis Andino All Rights
+        Reserved.</div>
+    </footer>
+
+    <!--DESKTOP-->
+    <footer class="hidden sm:block bg-primaryy bg-opacity-25 dark:bg-gray-300 dark:bg-opacity-25" id="footer">
+      <div
+        class="flex flex-row items-center justify-center md:pt-4 md:pb-3 lg:pt-5 lg:pb-4 sm:gap-12 md:gap-20 lg:gap-24">
+        <!--logo e imagen-->
+        <div class="flex flex-row items-center justify-center p-5">
+          <img class="sm:w-16 sm:h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 rounded-full" src="./img/logooasis.png"
+            alt="Logo">
+          <div class="pl-2 pr-2 flex flex-col items-center">
+            <div class="font-bold sm:text-xs md:text-base lg:text-lg">OASIS ANDINO</div>
+            <div class=" sm:text-[0.6rem] md:text-xs lg:text-base">Hostal/Hospedaje</div>
+          </div>
+        </div>
+
+        <!--redes-->
+        <div class="flex flex-row sm:gap-4 md:gap-6 lg:gap-9">
+          <div class=" sm:text-[0.6rem] md:text-xs lg:text-base ">
+            <a href="https://www.instagram.com/hostaloasisandino?igsh=MXdnYWVjNzd3YWE2&utm_source=qr"
+              class="hover:text-pink-500 flex flex-row items-center mb-2"><i
+                class="fa fa-instagram mr-1"></i>hostaloasisandino</a>
+            <a href="https://www.facebook.com/profile.php?id=61554410169587&mibextid=LQQJ4d"
+              class="hover:text-blue-600 flex flex-row items-center mt-2"><i
+                class="fa fa-facebook mr-1"></i>OasisAndino</a>
+          </div>
+
+          <div class="sm:text-[0.6rem] md:text-xs lg:text-base">
+            <a href="https://wa.me/message/BRTUPSHDUEZGE1"
+              class="hover:text-green-400 flex flex-row items-center mb-2"><i class="fa fa-whatsapp mr-1"></i>916 938
+              698</a>
+            <div class="flex flex-row items-center hover:text-red-400 mt-2"><i class="fa fa-envelope mr-1"></i>
+              hostaloasisandino@gmail.com</div>
+          </div>
+        </div>
+      </div>
+      <!--final-->
+      <div class="border-t border-black sm:text-[0.6rem]  md:text-sm lg:text-base pt-4 pb-4 flex justify-center ">© 2024
+        Oasis Andino All Rights
+        Reserved.</div>
+    </footer>
+
+  </section>
+  <!-- tab_bar-->
+  <div
+    class="w-full h-16 bg-white fixed left-0 bottom-0 shadow-md flex space-x-8 items-center justify-center md:hidden dark:bg-gray-800"
+    id="tab_bar">
+    <a href="#home">
+      <svg width="30" height="30" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path class="fill-current text-gray-300"
+          d="M10.707 2.29303C10.5195 2.10556 10.2652 2.00024 10 2.00024C9.73488 2.00024 9.48057 2.10556 9.29304 2.29303L2.29304 9.29303C2.11088 9.48163 2.01009 9.73423 2.01237 9.99643C2.01465 10.2586 2.11981 10.5094 2.30522 10.6948C2.49063 10.8803 2.74144 10.9854 3.00364 10.9877C3.26584 10.99 3.51844 10.8892 3.70704 10.707L4.00004 10.414V17C4.00004 17.2652 4.1054 17.5196 4.29293 17.7071C4.48047 17.8947 4.73482 18 5.00004 18H7.00004C7.26526 18 7.51961 17.8947 7.70715 17.7071C7.89468 17.5196 8.00004 17.2652 8.00004 17V15C8.00004 14.7348 8.1054 14.4805 8.29293 14.2929C8.48047 14.1054 8.73482 14 9.00004 14H11C11.2653 14 11.5196 14.1054 11.7071 14.2929C11.8947 14.4805 12 14.7348 12 15V17C12 17.2652 12.1054 17.5196 12.2929 17.7071C12.4805 17.8947 12.7348 18 13 18H15C15.2653 18 15.5196 17.8947 15.7071 17.7071C15.8947 17.5196 16 17.2652 16 17V10.414L16.293 10.707C16.4816 10.8892 16.7342 10.99 16.9964 10.9877C17.2586 10.9854 17.5095 10.8803 17.6949 10.6948C17.8803 10.5094 17.9854 10.2586 17.9877 9.99643C17.99 9.73423 17.8892 9.48163 17.707 9.29303L10.707 2.29303Z"
+          fill="#3F3F46" />
+      </svg>
+    </a>
+    <a href="#rentas_destacadas">
+      <svg width="30" height="30" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path class="fill-current text-primaryy" fill-rule="evenodd" clip-rule="evenodd"
+          d="M8 3.99997C6.93913 3.99997 5.92172 4.4214 5.17157 5.17155C4.42143 5.92169 4 6.93911 4 7.99997C4 9.06084 4.42143 10.0783 5.17157 10.8284C5.92172 11.5785 6.93913 12 8 12C9.06087 12 10.0783 11.5785 10.8284 10.8284C11.5786 10.0783 12 9.06084 12 7.99997C12 6.93911 11.5786 5.92169 10.8284 5.17155C10.0783 4.4214 9.06087 3.99997 8 3.99997ZM2 7.99997C1.99988 7.05568 2.22264 6.12468 2.65017 5.28271C3.0777 4.44074 3.69792 3.71157 4.4604 3.1545C5.22287 2.59743 6.10606 2.22819 7.03815 2.07681C7.97023 1.92543 8.92488 1.99618 9.82446 2.28332C10.724 2.57046 11.5432 3.06587 12.2152 3.72927C12.8872 4.39266 13.3931 5.20531 13.6919 6.10111C13.9906 6.9969 14.0737 7.95056 13.9343 8.88452C13.795 9.81848 13.4372 10.7064 12.89 11.476L17.707 16.293C17.8892 16.4816 17.99 16.7342 17.9877 16.9964C17.9854 17.2586 17.8802 17.5094 17.6948 17.6948C17.5094 17.8802 17.2586 17.9854 16.9964 17.9876C16.7342 17.9899 16.4816 17.8891 16.293 17.707L11.477 12.891C10.5794 13.5293 9.52335 13.9081 8.42468 13.9861C7.326 14.0641 6.22707 13.8381 5.2483 13.3329C4.26953 12.8278 3.44869 12.063 2.87572 11.1223C2.30276 10.1816 1.99979 9.10141 2 7.99997Z"
+          fill="#3F3F46" />
+      </svg>
+    </a>
+    <a href="#recomendados">
+      <svg width="30" height="30" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path class="fill-current text-gray-300" fill-rule="evenodd" clip-rule="evenodd"
+          d="M3.172 5.17202C3.92211 4.42214 4.93934 4.00087 6 4.00087C7.06066 4.00087 8.07789 4.42214 8.828 5.17202L10 6.34302L11.172 5.17202C11.541 4.78998 11.9824 4.48525 12.4704 4.27561C12.9584 4.06598 13.4833 3.95563 14.0144 3.95102C14.5455 3.9464 15.0722 4.04761 15.5638 4.24873C16.0554 4.44986 16.502 4.74687 16.8776 5.12244C17.2532 5.49801 17.5502 5.94462 17.7513 6.4362C17.9524 6.92779 18.0536 7.45451 18.049 7.98562C18.0444 8.51674 17.934 9.04162 17.7244 9.52964C17.5148 10.0177 17.21 10.459 16.828 10.828L10 17.657L3.172 10.828C2.42212 10.0779 2.00085 9.06068 2.00085 8.00002C2.00085 6.93936 2.42212 5.92213 3.172 5.17202Z"
+          fill="#3F3F46" />
+      </svg>
+    </a>
+    <button id="moonTab">
+      <svg width="30" height="30" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path class="fill-current text-gray-300"
+          d="M25.0748 19.2748C22.9267 20.2465 20.5334 20.5405 18.214 20.1177C15.8945 19.6949 13.7589 18.5753 12.0918 16.9082C10.4246 15.241 9.30509 13.1055 8.88228 10.786C8.45946 8.46654 8.75347 6.0733 9.72512 3.92514C8.01494 4.69801 6.51777 5.87422 5.36208 7.35288C4.20638 8.83154 3.42666 10.5685 3.08979 12.4147C2.75293 14.261 2.86898 16.1614 3.428 17.9529C3.98702 19.7444 4.97232 21.3736 6.29935 22.7006C7.62639 24.0276 9.25556 25.0129 11.0471 25.572C12.8386 26.131 14.739 26.247 16.5852 25.9102C18.4315 25.5733 20.1684 24.7936 21.6471 23.6379C23.1257 22.4822 24.302 20.985 25.0748 19.2748V19.2748Z"
+          fill="#CC2D4A" />
+      </svg>
+    </button>
+    <a href="">
+      <svg width="30" height="30" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path class="fill-current text-gray-300" fill-rule="evenodd" clip-rule="evenodd"
+          d="M10 9C10.7956 9 11.5587 8.68393 12.1213 8.12132C12.6839 7.55871 13 6.79565 13 6C13 5.20435 12.6839 4.44129 12.1213 3.87868C11.5587 3.31607 10.7956 3 10 3C9.20435 3 8.44129 3.31607 7.87868 3.87868C7.31607 4.44129 7 5.20435 7 6C7 6.79565 7.31607 7.55871 7.87868 8.12132C8.44129 8.68393 9.20435 9 10 9ZM3 18C3 17.0807 3.18106 16.1705 3.53284 15.3212C3.88463 14.4719 4.40024 13.7003 5.05025 13.0503C5.70026 12.4002 6.47194 11.8846 7.32122 11.5328C8.1705 11.1811 9.08075 11 10 11C10.9193 11 11.8295 11.1811 12.6788 11.5328C13.5281 11.8846 14.2997 12.4002 14.9497 13.0503C15.5998 13.7003 16.1154 14.4719 16.4672 15.3212C16.8189 16.1705 17 17.0807 17 18H3Z"
+          fill="#3F3F46" />
+      </svg>
+    </a>
+  </div>
+
+  <script>
+    const htmlElement = document.querySelector("html");
+    const moonNav = document.querySelector("#moonNav");
+    const moonTab = document.querySelector("#moonTab");
+    const toggleButton = document.querySelector("#toggle");
+    const toggleButtonSm = document.querySelector("#toggle-sm");
+
+    moonNav.addEventListener("click", toggleDarkMode);
+    moonTab.addEventListener("click", toggleDarkMode);
+
+    function toggleDarkMode() {
+      htmlElement.classList.toggle("dark");
+      moonNav.classList.toggle("dark");
+      moonTab.classList.toggle("dark");
+    }
+
+    // Obtener la altura del encabezado
+    var headerHeight = document.getElementById("encabezado").offsetHeight;
+
+    // Calcular la altura de la pantalla menos la altura del encabezado
+    var screenHeightMinusHeader = window.innerHeight - headerHeight;
+
+    // Aplicar la altura dinámicamente a la caja usando estilo en línea
+    document.getElementById("caja").style.height =
+      screenHeightMinusHeader + "px";
+  </script>
+</body>
+
 </html>
