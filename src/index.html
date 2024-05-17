@@ -13,6 +13,10 @@
     rel="stylesheet" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Poetsen+One&display=swap"
+    rel="stylesheet">
 </head>
 
 <body class="font-Montserrat dark:bg-gray-900 max-w-[1700px] justify-center">
@@ -55,36 +59,32 @@
       </div>
     </div>
   </div>
-  <div class="relative w-screen h-[60vh] max-w-[1700px]">
-    <h1 class=" flex flex-row justify-center pt-8 ">Vive la experiencia única de Pomabamba a través de Oasis Andino.</h1>
-    <div class="w-full h-full flex justify-center">
-      <div class="relative w-full md:w-3/5 h-full flex md:pt-9">
-        <div style="
-              background-image: url('./img/pmbb.jpg');
-              background-size: cover;
-            " class="h-full  hidden md:flex   w-1/3 bg-primaryy rounded-s-lg my-auto"></div>
-        <div class="h-full w-full md:w-2/3 flex flex-col items-center gap-y-5 px-4 md:pt-12 justify-center">
-          <h1 class="font-semibold text-2xl text-primaryy dark:text-white">
-            Descubre nuestra esencia
-          </h1>
-          <p class="text-base dark:text-white text-pretty text-center">
-            Somos una familia de la ciudad de Pomabamba, dedicada a brindarte
-            una experiencia única en los Andes. Con años de experiencia,
-            ofrecemos un servicio personalizado y cómodas habitaciones con
-            todas las comodidades necesarias. Además, nuestra ubicación te
-            permite explorar la belleza natural de la región. Al hospedarte
-            con nosotros, disfrutas de la hospitalidad de los Andes.
-          </p>
-          <p class="text-base dark:text-white">
-            ¡Esperamos recibirte pronto!
-          </p>
-        </div>
+
+  <div class="flex flex-col items-center h-auto mt-4">
+    <p class="mt-6 text-3xl font-dancing text-center mb-6 w-[35rem] dark:text-white">Vive la experiencia única de Pomabamba a través de
+      Oasis Andino.</p>
+
+    <div class="flex flex-row items-center justify-center mb-8 gap-4">
+      <img class="w-[25rem] h-64 rounded-lg" src="./img/pmbb.jpg" alt="img pomabamba">
+
+      <div class="flex flex-col justify-center items-center w-auto">
+        <h1 class="text-lg  text-primaryy font-bold mb-3 dark:text-white">Descubre nuestra esencia</h1>
+
+        <p class="text-center w-[30rem] text-lg mb-3 px-4 dark:text-white">Somos una familia de la ciudad de Pomabamba, dedicada
+          a brindarte una experiencia única en los Andes. Con años de experiencia,
+          ofrecemos un servicio personalizado y cómodas habitaciones con todas las
+          comodidades necesarias. Además, nuestra ubicación te permite explorar la
+          belleza natural de la región. Al hospedarte con nosotros,
+          disfrutas de la hospitalidad de los Andes. </p>
+
+        <p class="text-lg font-semibold dark:text-white">¡Esperamos recibirte pronto!</p>
       </div>
     </div>
   </div>
 
+
   <div class="p-6 mt-10 " id="Habitaciones">
-    <p class="text-3xl font-semibold text-primaryy dark:text-white">
+    <p class="pl-6 text-3xl font-semibold text-primaryy dark:text-white">
       Nuestras habitaciones
     </p>
     <div
@@ -167,44 +167,44 @@
   <div id="precios" class="h-auto w-auto p-6 ">
     <!-- Interior-->
     <div class=" px-2 ">
-      <p class="sm:text-xl md:text-2xl lg:text-3xl  text-primaryy font-semibold pb-6 pt-4 dark:text-white">
+      <p class="sm:text-xl md:text-2xl lg:text-3xl  text-primaryy font-semibold pl-6 pb-6 dark:text-white">
         Precios
       </p>
 
-      <div class="flex flex-col items-center">
-        <p class="sm:text-base md:text-lg lg:text-xl font-bold text-primaryy">Habitaciones interiores</p>
-        <p class="text-sm  pt-1 pb-2 font-semibold">*sin vista a la calle</p>
+      <div class="flex flex-col items-center ">
+        <p class="sm:text-base md:text-lg lg:text-xl font-bold text-primaryy dark:text-white">Habitaciones interiores</p>
+        <p class="text-sm  pt-1 pb-2 font-semibold dark:text-white">*sin vista a la calle</p>
       </div>
 
       <div class="flex flex-col lg:flex-row items-center justify-center lg:gap-14 gap-3 pb-6">
         <!--Card1-->
-        <div class="w-52 h-56 rounded-xl flex flex-col items-center mt-5 border border-primaryy  bg-white">
-          <p class="pt-6 font-bold text-lg text-primaryy">Tarifa por noche</p>
-          <p class="text-3xl text-black mt-5 font-semibold">S/. 50</p>
-          <p class="text-sm mt-3 ">Pago completo por</p>
-          <p class="text-sm">adelantado</p>
+        <div class="w-52 h-56 rounded-xl flex flex-col items-center mt-5 border border-primaryy dark:border-white">
+          <p class="pt-6 font-bold text-lg text-primaryy dark:text-white">Tarifa por noche</p>
+          <p class="text-3xl text-black mt-5 font-semibold dark:text-white">S/. 50</p>
+          <p class="text-sm mt-3 dark:text-white">Pago completo por</p>
+          <p class="text-sm dark:text-white">adelantado</p>
           <button type="button"
-            class=" rounded-full shadow-lg bg-primaryy text-white  text-xs font-semibold h-8 w-20 mt-3 transition duration-300 transform hover:scale-105">+info</button>
+            class=" rounded-full shadow-lg bg-primaryy dark:bg-gray-700 text-white  text-xs font-semibold h-8 w-20 mt-3 transition duration-300 transform hover:scale-105">+info</button>
         </div>
 
         <!--Card2-->
-        <div class="w-52 h-56 rounded-xl flex flex-col items-center mt-5 border border-primaryy  bg-white">
-          <p class="pt-6 font-bold text-lg text-primaryy">Tarifa semanal</p>
-          <p class="text-3xl text-black mt-5 font-semibold">S/. 50</p>
-          <p class="text-sm mt-3 ">Pago adelantado</p>
-          <p class="text-sm">de S/. 80</p>
+        <div class="w-52 h-56 rounded-xl flex flex-col items-center mt-5 border border-primaryy dark:border-white">
+          <p class="pt-6 font-bold text-lg text-primaryy dark:text-white">Tarifa semanal</p>
+          <p class="text-3xl text-black mt-5 font-semibold dark:text-white">S/. 50</p>
+          <p class="text-sm mt-3 dark:text-white">Pago adelantado</p>
+          <p class="text-sm dark:text-white">de S/. 80</p>
           <button type="button"
-            class=" rounded-full shadow-lg bg-primaryy text-white text-xs font-semibold h-8 w-20 mt-3 transition duration-300 transform hover:scale-105">+info</button>
+            class=" rounded-full shadow-lg bg-primaryy dark:bg-gray-700 text-white text-xs font-semibold h-8 w-20 mt-3 transition duration-300 transform hover:scale-105">+info</button>
         </div>
 
         <!--Card3-->
-        <div class="w-52 h-56 rounded-xl flex flex-col items-center mt-5 border border-primaryy  bg-white">
-          <p class="pt-6 font-bold text-lg text-primaryy">Tarifa mensual</p>
-          <p class="text-3xl text-black mt-5 font-semibold">S/. 350</p>
-          <p class="text-sm mt-3 ">Pago mensual por</p>
-          <p class="text-sm">adelantado</p>
+        <div class="w-52 h-56 rounded-xl flex flex-col items-center mt-5 border border-primaryy dark:border-white">
+          <p class="pt-6 font-bold text-lg text-primaryy dark:text-white">Tarifa mensual</p>
+          <p class="text-3xl text-black mt-5 font-semibold dark:text-white">S/. 350</p>
+          <p class="text-sm mt-3 dark:text-white">Pago mensual por</p>
+          <p class="text-sm dark:text-white">adelantado</p>
           <button type="button"
-            class=" rounded-full shadow-lg bg-primaryy text-white text-xs font-semibold h-8 w-20 mt-3 transition duration-300 transform hover:scale-105">+info</button>
+            class=" rounded-full shadow-lg bg-primaryy dark:bg-gray-700 text-white text-xs font-semibold h-8 w-20 mt-3 transition duration-300 transform hover:scale-105">+info</button>
         </div>
       </div>
     </div>
@@ -212,39 +212,39 @@
     <!-- Exteriores-->
 
     <div class="flex flex-col items-center mt-4">
-      <p class="sm:text-base md:text-lg lg:text-xl font-bold text-primaryy">Habitaciones exteriores</p>
-      <p class="text-sm pt-1 pb-2 font-semibold">*con vista a la calle</p>
+      <p class="sm:text-base md:text-lg lg:text-xl font-bold text-primaryy dark:text-white">Habitaciones exteriores</p>
+      <p class="text-sm pt-1 pb-2 font-semibold dark:text-white">*con vista a la calle</p>
     </div>
 
     <div class="flex flex-col lg:flex-row items-center justify-center lg:gap-14 gap-3 pb-6">
       <!--Card1-->
-      <div class="w-52 h-56 rounded-xl flex flex-col items-center mt-5 border border-primaryy  bg-white">
-        <p class="pt-6 font-bold text-lg text-primaryy">Tarifa por noche</p>
-        <p class="text-3xl text-black mt-5 font-semibold">S/. 70</p>
-        <p class="text-sm mt-3 ">Pago completo por</p>
-        <p class="text-sm">adelantado</p>
+      <div class="w-52 h-56 rounded-xl flex flex-col items-center mt-5 border border-primaryy dark:border-white">
+        <p class="pt-6 font-bold text-lg text-primaryy dark:text-white">Tarifa por noche</p>
+        <p class="text-3xl text-black mt-5 font-semibold dark:text-white">S/. 70</p>
+        <p class="text-sm mt-3 dark:text-white">Pago completo por</p>
+        <p class="text-sm dark:text-white">adelantado</p>
         <button type="button"
-          class=" rounded-full shadow-lg bg-primaryy text-white  text-xs font-semibold h-8 w-20 mt-3 transition duration-300 transform hover:scale-105">+info</button>
+          class=" rounded-full shadow-lg bg-primaryy dark:bg-gray-700 text-white  text-xs font-semibold h-8 w-20 mt-3 transition duration-300 transform hover:scale-105">+info</button>
       </div>
 
       <!--Card2-->
-      <div class="w-52 h-56 rounded-xl flex flex-col items-center mt-5 border border-primaryy  bg-white">
-        <p class="pt-6 font-bold text-lg text-primaryy">Tarifa semanal</p>
-        <p class="text-3xl text-black mt-5 font-semibold">S/. 50</p>
-        <p class="text-sm mt-3 ">Pago adelantado</p>
-        <p class="text-sm">de S/. 80</p>
+      <div class="w-52 h-56 rounded-xl flex flex-col items-center mt-5 border border-primaryy dark:border-white">
+        <p class="pt-6 font-bold text-lg text-primaryy dark:text-white">Tarifa semanal</p>
+        <p class="text-3xl text-black mt-5 font-semibold dark:text-white">S/. 50</p>
+        <p class="text-sm mt-3 dark:text-white">Pago adelantado</p>
+        <p class="text-sm dark:text-white">de S/. 80</p>
         <button type="button"
-          class=" rounded-full shadow-lg bg-primaryy text-white text-xs font-semibold h-8 w-20 mt-3 transition duration-300 transform hover:scale-105">+info</button>
+          class=" rounded-full shadow-lg bg-primaryy dark:bg-gray-700 text-white text-xs font-semibold h-8 w-20 mt-3 transition duration-300 transform hover:scale-105">+info</button>
       </div>
 
       <!--Card3-->
-      <div class="w-52 h-56 rounded-xl flex flex-col items-center mt-5 border border-primaryy  bg-white">
-        <p class="pt-6 font-bold text-lg text-primaryy">Tarifa mensual</p>
-        <p class="text-3xl text-black mt-5 font-semibold">S/. 370</p>
-        <p class="text-sm mt-3 ">Pago mensual por</p>
-        <p class="text-sm">adelantado</p>
+      <div class="w-52 h-56 rounded-xl flex flex-col items-center mt-5 border border-primaryy dark:border-white">
+        <p class="pt-6 font-bold text-lg text-primaryy dark:text-white">Tarifa mensual</p>
+        <p class="text-3xl text-black mt-5 font-semibold dark:text-white">S/. 370</p>
+        <p class="text-sm mt-3 dark:text-white">Pago mensual por</p>
+        <p class="text-sm dark:text-white">adelantado</p>
         <button type="button"
-          class=" rounded-full shadow-lg bg-primaryy text-white text-xs font-semibold h-8 w-20 mt-3 transition duration-300 transform hover:scale-105">+info</button>
+          class=" rounded-full shadow-lg bg-primaryy dark:bg-gray-700 text-white text-xs font-semibold h-8 w-20 mt-3 transition duration-300 transform hover:scale-105">+info</button>
       </div>
     </div>
   </div>
