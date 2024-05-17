@@ -46,6 +46,7 @@ module.exports = {
           'Segoe UI Symbol', 
           'Noto Color Emoji'
         ],
+        dancing: ['"Dancing Script"', 'cursive'],
       },
       backgroundImage: {
         'sanFrancisco': "url('./img/sanFrancisco.jpg')",
