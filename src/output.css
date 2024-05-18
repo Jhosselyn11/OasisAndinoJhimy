@@ -1361,13 +1361,13 @@ video {
     flex-direction: column;
   }
 
+  .xs\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
   .xs\:text-sm {
     font-size: 0.875rem;
     line-height: 1.25rem;
-  }
-
-  .xs\:text-xl {
-    font-size: 1.25rem;
-    line-height: 1.75rem;
   }
 }
