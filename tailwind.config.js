@@ -74,6 +74,9 @@ module.exports = {
         'jhimy': '77%',
 
       },
+      screens: {
+        'xs': {'max': '640px'}, // Nueva pantalla personalizada
+      },
       
     },
   },
