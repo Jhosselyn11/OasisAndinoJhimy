@@ -48,23 +48,7 @@ module.exports = {
         ],
         dancing: ['"Dancing Script"', 'cursive'],
       },
-      backgroundImage: {
-        'sanFrancisco': "url('./img/sanFrancisco.jpg')",
-			  'sanFranciscoDesktop': "url('./img/sanFranciscoDesktop.jpg')",
-			  'yosemite': "url('../img/yosemite.jpg')",
-			  'LA': "url('./img/LA.jpg')",
-			  'seattle': "url('img/seattle.jpg')",
-			  'new_york': "url('./src/img/new_york.jpg')",
-			  'norway': "url('src/img/norway.jpg')",
-			  'sydney': "url('../src/img/sydney.jpg')",
-			  'miami': "url('/src/img/miami.jpg')",
-			  'switzerland': "url('/src/img/switzerland.jpg')",
-			  'bali': "url('/src/img/bali.jpg')",
-			  'norway': "url('/src/img/norway.jpg')",
-			  'chicago': "url('/src/img/chicago.jpg')",
-			  'europe': "url('/src/img/europe.jpg')",
-			  'iceland': "url('/src/img/iceland.jpg')",
-      },
+      
       fontSize:{
         'xl-plus': '75px',
         '2xl-plus':'88px', // Personaliza el tamaño del texto a 1.25rem
